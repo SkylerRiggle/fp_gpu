@@ -40,16 +40,6 @@ CUBE_INDICES: list[int] = [
     1, 3, 5, 3, 5, 7  # Right Face
 ]
 
-class KEYCODE:
-    W = ord("w")
-    S = ord("s")
-
-    A = ord("a")
-    D = ord("d")
-
-    J = ord("j")
-    K = ord("k")
-
 def project_vertex(vertex: mdl.Vertex) -> tuple[float, float, float]:
     global CAM_POSITION
 
@@ -82,17 +72,23 @@ def draw_model(frame: np.ndarray, z_buffer: np.ndarray, model: mdl.Model) -> Non
         vsx1, vsy1, vsz1 = x1 - x0, y1 - y0, z1 - z0
         vsx2, vsy2, vsz2 = x2 - x0, y2 - y0, z2 - z0
 
+        vsc = cross_product(vsx1, vsy1, vsx2, vsy2)
+        
+        if vsc == 0.0:
+            continue
+
+        vsc = 1.0 / vsc
+
         vsr1, vsg1, vsb1 = r1 - r0, g1 - g0, b1 - b0
         vsr2, vsg2, vsb2 = r2 - r0, g2 - g0, b2 - b0
 
         for x in range(min_x, max_x):
+            qx = x - x0
             for y in range(min_y, max_y):
-                qx = x - x0
                 qy = y - y0
 
-                vsc = cross_product(vsx1, vsy1, vsx2, vsy2)
-                s = cross_product(qx, qy, vsx2, vsy2) / vsc
-                t = cross_product(vsx1, vsy1, qx, qy) / vsc
+                s = cross_product(qx, qy, vsx2, vsy2) * vsc
+                t = cross_product(vsx1, vsy1, qx, qy) * vsc
 
                 if s >= 0.0 and t >= 0.0 and s + t <= 1.0:
                     z = z0 + s * vsz1 + t * vsz2
@@ -130,8 +126,7 @@ def main(title: str) -> None:
         
         cv.imshow(title, frame)
 
-        fps: float = 1.0 / delta_time if delta_time > 0.0 else 0.0
-        print(f"FPS: {fps:.2f}")
+        print(f"FPS: {1.0 / (delta_time + 1e-6):.2f}")
 
         frame.fill(0)
         z_buffer.fill(0)
