@@ -7,7 +7,7 @@ from random import random
 SCREEN_WIDTH: int = 1280
 SCREEN_HEIGHT: int = 720
 
-NUM_CUBES: int = 5
+NUM_CUBES: int = 2
 FIELD_SIZE: list[float] = [5.0, 5.0, 5.0]
 
 CAMERA_FOV: float = 60.0
