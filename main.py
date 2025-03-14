@@ -1,13 +1,12 @@
 import cv2 as cv
 import numpy as np
 import model as mdl
-from time import time
 from random import random
 
 SCREEN_WIDTH: int = 1280
 SCREEN_HEIGHT: int = 720
 
-NUM_CUBES: int = 2
+NUM_CUBES: int = 5
 FIELD_SIZE: list[float] = [5.0, 5.0, 5.0]
 
 CAMERA_FOV: float = 60.0
@@ -41,7 +40,7 @@ CUBE_INDICES: list[int] = [
 ]
 
 def project_vertex(vertex: mdl.Vertex) -> tuple[float, float, float]:
-    global CAM_POSITION
+    global SCREEN_HEIGHT, SCREEN_WIDTH, CAM_A, CAM_B, CAM_C, CAM_D
 
     x, y, z = vertex.get_position()
 
@@ -55,6 +54,8 @@ def cross_product(x0: float, y0: float, x1: float, y1: float) -> float:
     return x0 * y1 - x1 * y0
 
 def draw_model(frame: np.ndarray, z_buffer: np.ndarray, model: mdl.Model) -> None:
+    global SCREEN_WIDTH, SCREEN_HEIGHT
+
     for v0, v1, v2 in model.iterate_triangles():
         x0, y0, z0 = project_vertex(v0)
         x1, y1, z1 = project_vertex(v1)
@@ -100,7 +101,7 @@ def draw_model(frame: np.ndarray, z_buffer: np.ndarray, model: mdl.Model) -> Non
                         frame[y, x, 2] = int(r0 + s * vsr1 + t * vsr2)
 
 def main(title: str) -> None:
-    global CUBE_VERTICES, CUBE_INDICES, SCREEN_HEIGHT, SCREEN_WIDTH
+    global CUBE_VERTICES, CUBE_INDICES, SCREEN_HEIGHT, SCREEN_WIDTH, FIELD_SIZE, NUM_CUBES
 
     scene: list[mdl.Model] = [mdl.Model(CUBE_VERTICES, CUBE_INDICES) for _ in range(NUM_CUBES)]
 
@@ -110,23 +111,14 @@ def main(title: str) -> None:
 
     cv.namedWindow(title, cv.WINDOW_AUTOSIZE)
 
-    delta_time: float = 0.0
-    prev_time: float = time()
-
     frame = np.zeros((SCREEN_HEIGHT, SCREEN_WIDTH, 3), dtype=np.uint8)
     z_buffer = np.zeros((SCREEN_HEIGHT, SCREEN_WIDTH), dtype=np.float32)
 
     while cv.getWindowProperty(title, cv.WND_PROP_VISIBLE) > 0:
-        cur_time: float = time()
-        delta_time = cur_time - prev_time
-        prev_time = cur_time
-
         for model in scene:
             draw_model(frame, z_buffer, model)
         
         cv.imshow(title, frame)
-
-        print(f"FPS: {1.0 / (delta_time + 1e-6):.2f}")
 
         frame.fill(0)
         z_buffer.fill(0)
