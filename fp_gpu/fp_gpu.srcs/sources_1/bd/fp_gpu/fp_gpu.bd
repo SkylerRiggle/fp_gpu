@@ -1388,7 +1388,7 @@
             "value": "0"
           },
           "PCW_S_AXI_HP0_DATA_WIDTH": {
-            "value": "64"
+            "value": "32"
           },
           "PCW_TPIU_PERIPHERAL_CLKSRC": {
             "value": "External"
@@ -1914,7 +1914,7 @@
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
             "parameters": {
               "DATA_WIDTH": {
-                "value": "16",
+                "value": "32",
                 "value_src": "auto"
               },
               "PROTOCOL": {
@@ -1926,7 +1926,7 @@
                 "value_src": "constant"
               },
               "ADDR_WIDTH": {
-                "value": "16",
+                "value": "32",
                 "value_src": "auto"
               },
               "AWUSER_WIDTH": {
@@ -2009,14 +2009,14 @@
             "address_space_ref": "m_axi_hp0",
             "base_address": {
               "minimum": "0x00000000",
-              "maximum": "0x0000FFFF",
-              "width": "16"
+              "maximum": "0xFFFFFFFF",
+              "width": "32"
             },
             "port_maps": {
               "AWADDR": {
                 "physical_name": "m_axi_hp0_awaddr",
                 "direction": "O",
-                "left": "15",
+                "left": "31",
                 "right": "0"
               },
               "AWLEN": {
@@ -2048,7 +2048,7 @@
               "WDATA": {
                 "physical_name": "m_axi_hp0_wdata",
                 "direction": "O",
-                "left": "15",
+                "left": "31",
                 "right": "0"
               },
               "WSTRB": {
@@ -2080,7 +2080,7 @@
               "ARADDR": {
                 "physical_name": "m_axi_hp0_araddr",
                 "direction": "O",
-                "left": "15",
+                "left": "31",
                 "right": "0"
               },
               "ARLEN": {
@@ -2112,7 +2112,7 @@
               "RDATA": {
                 "physical_name": "m_axi_hp0_rdata",
                 "direction": "I",
-                "left": "15",
+                "left": "31",
                 "right": "0"
               },
               "RLAST": {
@@ -2155,8 +2155,8 @@
         "addressing": {
           "address_spaces": {
             "m_axi_hp0": {
-              "range": "64K",
-              "width": "16"
+              "range": "4G",
+              "width": "32"
             }
           }
         }
@@ -2207,8 +2207,8 @@
           "Processing_System/FCLK_CLK0",
           "Processing_System/S_AXI_HP0_ACLK",
           "Processing_System/M_AXI_GP0_ACLK",
-          "AXI_Interconnect/clk",
-          "PS_Reset/slowest_sync_clk"
+          "PS_Reset/slowest_sync_clk",
+          "AXI_Interconnect/clk"
         ]
       }
     }
