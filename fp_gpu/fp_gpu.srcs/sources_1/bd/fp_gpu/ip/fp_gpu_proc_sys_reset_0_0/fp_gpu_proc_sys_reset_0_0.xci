@@ -1,11 +1,11 @@
 {
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
-    "xci_name": "fp_gpu_rst_ps7_0_100M_0",
-    "cell_name": "rst_ps7_0_100M",
+    "xci_name": "fp_gpu_proc_sys_reset_0_0",
+    "cell_name": "PS_Reset",
     "component_reference": "xilinx.com:ip:proc_sys_reset:5.0",
     "ip_revision": "16",
-    "gen_directory": "../../../../../../fp_gpu.gen/sources_1/bd/fp_gpu/ip/fp_gpu_rst_ps7_0_100M_0",
+    "gen_directory": "../../../../../../fp_gpu.gen/sources_1/bd/fp_gpu/ip/fp_gpu_proc_sys_reset_0_0",
     "parameters": {
       "component_parameters": {
         "C_NUM_PERP_ARESETN": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
@@ -16,7 +16,7 @@
         "C_EXT_RESET_HIGH": [ { "value": "1", "value_permission": "bd", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_AUX_RST_WIDTH": [ { "value": "4", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_EXT_RST_WIDTH": [ { "value": "4", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "Component_Name": [ { "value": "fp_gpu_rst_ps7_0_100M_0", "resolve_type": "user", "usage": "all" } ],
+        "Component_Name": [ { "value": "fp_gpu_proc_sys_reset_0_0", "resolve_type": "user", "usage": "all" } ],
         "USE_BOARD_FLOW": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "RESET_BOARD_INTERFACE": [ { "value": "Custom", "resolve_type": "user", "usage": "all" } ]
       },
@@ -48,7 +48,7 @@
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
         "IPREVISION": [ { "value": "16" } ],
         "MANAGED": [ { "value": "TRUE" } ],
-        "OUTPUTDIR": [ { "value": "../../../../../../fp_gpu.gen/sources_1/bd/fp_gpu/ip/fp_gpu_rst_ps7_0_100M_0" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../fp_gpu.gen/sources_1/bd/fp_gpu/ip/fp_gpu_proc_sys_reset_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
         "SWVERSION": [ { "value": "2024.2" } ],
