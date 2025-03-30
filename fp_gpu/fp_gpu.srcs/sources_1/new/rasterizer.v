@@ -29,6 +29,19 @@ module rasterizer(
     output reg model_rendered,
     output reg frame_cleared,
 
+    // Memory address output
+    output reg s_axis_addr_0_tvalid,
+    input wire s_axis_addr_0_tready,
+    output reg [31:0] s_axis_addr_0_tdata,
+
+    output reg s_axis_addr_1_tvalid,
+    input wire s_axis_addr_1_tready,
+    output reg [31:0] s_axis_addr_1_tdata,
+
+    output reg s_axis_addr_2_tvalid,
+    input wire s_axis_addr_2_tready,
+    output reg [31:0] s_axis_addr_2_tdata,
+
     // Memory data input
     input wire s_axis_float_0_valid,
     input wire s_axis_int_0_valid,
