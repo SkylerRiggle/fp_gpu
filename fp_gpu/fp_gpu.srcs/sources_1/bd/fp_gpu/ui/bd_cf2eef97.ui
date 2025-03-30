@@ -1,30 +1,42 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-253,-35",
+   "Default View_ScaleFactor":"1.02978",
+   "Default View_TopLeft":"-124,229",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 4 -x 1040 -y 60 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 4 -x 1040 -y 80 -defaultsOSRD
-preplace inst Processing_System -pg 1 -lvl 3 -x 780 -y 110 -defaultsOSRD
-preplace inst AXI_Interconnect -pg 1 -lvl 2 -x 410 -y 100 -defaultsOSRD
-preplace inst AXI_Encoder -pg 1 -lvl 1 -x 150 -y 300 -defaultsOSRD
-preplace inst AXI_Decoder -pg 1 -lvl 1 -x 150 -y 90 -defaultsOSRD
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 20 170 NJ 170 550 220 1020
-preplace netloc Net1 1 0 4 30 230 NJ 230 NJ 230 1010
-preplace netloc axi_interconnect_0_m_axi_hp0 1 2 1 N 100
-preplace netloc processing_system7_0_DDR 1 3 1 NJ 60
-preplace netloc processing_system7_0_FIXED_IO 1 3 1 NJ 80
-preplace netloc axi_decoder_0_m_axi_hpr 1 1 1 N 90
-preplace netloc axi_encoder_0_m_axi_hpw 1 1 1 270 110n
-levelinfo -pg 1 0 150 410 780 1040
-pagesize -pg 1 -db -bbox -sgen 0 0 1160 370
+preplace port DDR -pg 1 -lvl 5 -x 1360 -y 420 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 5 -x 1360 -y 440 -defaultsOSRD
+preplace inst processing_system7 -pg 1 -lvl 4 -x 1100 -y 460 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 3 -x 700 -y 420 -defaultsOSRD
+preplace inst axi_interconnect_1 -pg 1 -lvl 3 -x 700 -y 540 -defaultsOSRD
+preplace inst axi_interconnect_2 -pg 1 -lvl 3 -x 700 -y 730 -defaultsOSRD
+preplace inst axi_interconnect_3 -pg 1 -lvl 3 -x 700 -y 70 -defaultsOSRD
+preplace inst gpu_controller -pg 1 -lvl 2 -x 410 -y 180 -defaultsOSRD
+preplace inst axi_reader_0 -pg 1 -lvl 2 -x 410 -y 410 -defaultsOSRD
+preplace inst axi_reader_1 -pg 1 -lvl 2 -x 410 -y 530 -defaultsOSRD
+preplace inst axi_reader_2 -pg 1 -lvl 2 -x 410 -y 720 -defaultsOSRD
+preplace inst depth_writer -pg 1 -lvl 1 -x 120 -y 470 -defaultsOSRD
+preplace inst pixel_writer -pg 1 -lvl 1 -x 120 -y 350 -defaultsOSRD
+preplace netloc Net 1 0 5 -10 270 260 620 NJ 620 870 640 1340
+preplace netloc processing_system7_FCLK_RESET0_N 1 0 5 0 280 270 650 NJ 650 NJ 650 1330
+preplace netloc processing_system7_0_DDR 1 4 1 NJ 420
+preplace netloc processing_system7_0_FIXED_IO 1 4 1 NJ 440
+preplace netloc axi_interconnect_1_m_axi_hp 1 3 1 840 440n
+preplace netloc axi_interconnect_0_m_axi_hp 1 3 1 N 420
+preplace netloc axi_interconnect_2_m_axi_hp 1 3 1 860 460n
+preplace netloc axi_interconnect_3_m_axi_hp 1 3 1 850 70n
+preplace netloc gpu_controller_m_axi_hpw 1 2 1 N 80
+preplace netloc gpu_controller_m_axi_hpr 1 2 1 N 60
+preplace netloc axi_reader_0_m_axi_hpr 1 2 1 NJ 410
+preplace netloc axi_reader_1_m_axi_hpr 1 2 1 NJ 530
+preplace netloc axi_reader_2_m_axi_hpr 1 2 1 NJ 720
+preplace netloc depth_writer_m_axi_hpw 1 1 2 240 600 560J
+preplace netloc pixel_writer_0_m_axi_hpw 1 1 2 250J 610 550
+levelinfo -pg 1 -30 120 410 700 1100 1360
+pagesize -pg 1 -db -bbox -sgen -30 -20 1480 800
 "
 }
 {
-   "da_axi4_cnt":"4",
-   "da_board_cnt":"1",
-   "da_clkrst_cnt":"2",
-   "da_ps7_cnt":"3"
+   "da_ps7_cnt":"2"
 }
