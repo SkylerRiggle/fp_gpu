@@ -69,7 +69,15 @@ module rasterizer(
     output reg [7:0] m_axis_pixel_red,
     output reg [7:0] m_axis_pixel_green,
     output reg [7:0] m_axis_pixel_blue,
-    output reg [63:0] m_axis_depth
+    output reg [63:0] m_axis_depth,
+
+    // Frame size output
+    output reg frame_size_pixel_valid,
+    input wire frame_size_pixel_ready,
+    output reg frame_size_depth_valid,
+    input wire frame_size_depth_ready,
+    output reg [31:0] frame_width,
+    output reg [31:0] frame_height
 );
 
 // Screen dimensions

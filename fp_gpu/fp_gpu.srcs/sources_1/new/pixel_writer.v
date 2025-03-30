@@ -6,6 +6,12 @@ module pixel_writer #(
     input wire clk,
     input wire rst_n,
 
+    // Input frame size
+    input wire s_axis_size_tvalid,
+    output reg s_axis_size_tready,
+    input wire [31:0] s_axis_width,
+    input wire [31:0] s_axis_height,
+
     // Pixel input
     input wire s_axis_pixel_tvalid,
     output reg s_axis_pixel_tready,

@@ -78,7 +78,7 @@ always @(posedge clk or negedge rst_n) begin
 
                     m_axi_hpr_arburst <= 2'b01;
                     m_axi_hpr_arsize <= 3'b010;
-                    m_axi_hpr_arlen <= 4'b0000;
+                    m_axi_hpr_arlen <= 4'b0001;
 
                     m_axi_hpr_rready <= 1'b1;
                     state <= READ_STATE;

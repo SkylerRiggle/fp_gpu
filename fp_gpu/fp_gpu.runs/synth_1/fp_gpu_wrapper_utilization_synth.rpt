@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Sun Mar 30 17:29:50 2025
+| Date         : Sun Mar 30 18:02:12 2025
 | Host         : Diogenes_Urn running 64-bit major release  (build 9200)
 | Command      : report_utilization -file fp_gpu_wrapper_utilization_synth.rpt -pb fp_gpu_wrapper_utilization_synth.pb
 | Design       : fp_gpu_wrapper
