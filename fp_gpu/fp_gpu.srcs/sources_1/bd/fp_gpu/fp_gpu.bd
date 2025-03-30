@@ -5681,11 +5681,6 @@
             "left": "31",
             "right": "0"
           },
-          "s_axis_height": {
-            "direction": "I",
-            "left": "31",
-            "right": "0"
-          },
           "s_axis_pixel_x": {
             "direction": "I",
             "left": "31",
@@ -6400,8 +6395,8 @@
           "axi_reader_1/clk",
           "axi_reader_2/clk",
           "depth_writer/clk",
-          "pixel_writer/clk",
-          "rasterizer/clk"
+          "rasterizer/clk",
+          "pixel_writer/clk"
         ]
       },
       "axi_reader_0_m_axis_out_tdata": {
@@ -6568,8 +6563,8 @@
           "axi_reader_1/rst_n",
           "axi_reader_2/rst_n",
           "depth_writer/rst_n",
-          "pixel_writer/rst_n",
-          "rasterizer/rst_n"
+          "rasterizer/rst_n",
+          "pixel_writer/rst_n"
         ]
       },
       "rasterizer_camera_position_processed": {
@@ -6599,7 +6594,6 @@
       "rasterizer_frame_height": {
         "ports": [
           "rasterizer/frame_height",
-          "pixel_writer/s_axis_height",
           "depth_writer/s_axis_height"
         ]
       },
@@ -6618,8 +6612,8 @@
       "rasterizer_frame_width": {
         "ports": [
           "rasterizer/frame_width",
-          "pixel_writer/s_axis_width",
-          "depth_writer/s_axis_width"
+          "depth_writer/s_axis_width",
+          "pixel_writer/s_axis_width"
         ]
       },
       "rasterizer_m_axis_depth": {

@@ -45,7 +45,6 @@
         "s_axis_size_tvalid": [ { "direction": "in" } ],
         "s_axis_size_tready": [ { "direction": "out" } ],
         "s_axis_width": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
-        "s_axis_height": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
         "s_axis_pixel_tvalid": [ { "direction": "in" } ],
         "s_axis_pixel_tready": [ { "direction": "out" } ],
         "s_axis_pixel_x": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
