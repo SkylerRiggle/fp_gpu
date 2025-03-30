@@ -1,0 +1,121 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "fp_gpu_rasterizer_0_0",
+    "cell_name": "rasterizer",
+    "component_reference": "xilinx.com:module_ref:rasterizer:1.0",
+    "ip_revision": "1",
+    "gen_directory": "../../../../../../fp_gpu.gen/sources_1/bd/fp_gpu/ip/fp_gpu_rasterizer_0_0",
+    "parameters": {
+      "component_parameters": {
+        "Component_Name": [ { "value": "fp_gpu_rasterizer_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "zynq" } ],
+        "BASE_BOARD_PART": [ { "value": "tul.com.tw:pynq-z2:part0:1.0" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7z020" } ],
+        "PACKAGE": [ { "value": "clg400" } ],
+        "PREFHDL": [ { "value": "VERILOG" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-1" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "1" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../fp_gpu.gen/sources_1/bd/fp_gpu/ip/fp_gpu_rasterizer_0_0" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2024.2" } ],
+        "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "clk": [ { "direction": "in" } ],
+        "rst_n": [ { "direction": "in" } ],
+        "new_screen_size": [ { "direction": "in" } ],
+        "new_projection_matrix": [ { "direction": "in" } ],
+        "new_clear_color": [ { "direction": "in" } ],
+        "new_camera_position": [ { "direction": "in" } ],
+        "new_camera_rotation": [ { "direction": "in" } ],
+        "new_model_position": [ { "direction": "in" } ],
+        "new_model_rotation": [ { "direction": "in" } ],
+        "new_model_scale": [ { "direction": "in" } ],
+        "new_mesh_data": [ { "direction": "in" } ],
+        "model_should_render": [ { "direction": "in" } ],
+        "clear_frame": [ { "direction": "in" } ],
+        "screen_size_processed": [ { "direction": "out" } ],
+        "projection_matrix_processed": [ { "direction": "out" } ],
+        "clear_color_processed": [ { "direction": "out" } ],
+        "camera_position_processed": [ { "direction": "out" } ],
+        "camera_rotation_processed": [ { "direction": "out" } ],
+        "model_position_processed": [ { "direction": "out" } ],
+        "model_rotation_processed": [ { "direction": "out" } ],
+        "model_scale_processed": [ { "direction": "out" } ],
+        "mesh_data_processed": [ { "direction": "out" } ],
+        "model_rendered": [ { "direction": "out" } ],
+        "frame_cleared": [ { "direction": "out" } ],
+        "s_axis_float_0_valid": [ { "direction": "in" } ],
+        "s_axis_int_0_valid": [ { "direction": "in" } ],
+        "s_axis_0_ready": [ { "direction": "out" } ],
+        "s_axis_float_0_data": [ { "direction": "in", "size_left": "63", "size_right": "0" } ],
+        "s_axis_int_0_data": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "s_axis_float_1_valid": [ { "direction": "in" } ],
+        "s_axis_int_1_valid": [ { "direction": "in" } ],
+        "s_axis_1_ready": [ { "direction": "out" } ],
+        "s_axis_float_1_data": [ { "direction": "in", "size_left": "63", "size_right": "0" } ],
+        "s_axis_int_1_data": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "s_axis_float_2_valid": [ { "direction": "in" } ],
+        "s_axis_int_2_valid": [ { "direction": "in" } ],
+        "s_axis_2_ready": [ { "direction": "out" } ],
+        "s_axis_float_2_data": [ { "direction": "in", "size_left": "63", "size_right": "0" } ],
+        "s_axis_int_2_data": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "m_axis_pixel_valid": [ { "direction": "out" } ],
+        "m_axis_pixel_ready": [ { "direction": "in" } ],
+        "m_axis_pixel_x": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "m_axis_pixel_y": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "m_axis_pixel_red": [ { "direction": "out", "size_left": "7", "size_right": "0" } ],
+        "m_axis_pixel_green": [ { "direction": "out", "size_left": "7", "size_right": "0" } ],
+        "m_axis_pixel_blue": [ { "direction": "out", "size_left": "7", "size_right": "0" } ],
+        "m_axis_depth": [ { "direction": "out", "size_left": "63", "size_right": "0" } ]
+      },
+      "interfaces": {
+        "rst_n": {
+          "vlnv": "xilinx.com:signal:reset:1.0",
+          "abstraction_type": "xilinx.com:signal:reset_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "POLARITY": [ { "value": "ACTIVE_LOW", "value_src": "constant", "value_permission": "bd_and_user", "usage": "all" } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "RST": [ { "physical_name": "rst_n" } ]
+          }
+        },
+        "clk": {
+          "vlnv": "xilinx.com:signal:clock:1.0",
+          "abstraction_type": "xilinx.com:signal:clock_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "FREQ_HZ": [ { "value": "100000000", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "FREQ_TOLERANCE_HZ": [ { "value": "0", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PHASE": [ { "value": "0.0", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "ASSOCIATED_BUSIF": [ { "value": "", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "ASSOCIATED_PORT": [ { "value": "", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "ASSOCIATED_RESET": [ { "value": "", "value_permission": "bd_and_user", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "CLK": [ { "physical_name": "clk" } ]
+          }
+        }
+      }
+    }
+  }
+}

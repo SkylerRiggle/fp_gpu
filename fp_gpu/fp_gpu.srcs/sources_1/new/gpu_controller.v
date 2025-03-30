@@ -17,7 +17,19 @@ module gpu_controller #(
     output reg new_model_scale,
     output reg new_mesh_data,
     output reg model_should_render,
-    output reg clear_frames,
+    output reg clear_frame,
+
+    input wire screen_size_processed,
+    input wire projection_matrix_processed,
+    input wire clear_color_processed,
+    input wire camera_position_processed,
+    input wire camera_rotation_processed,
+    input wire model_position_processed,
+    input wire model_rotation_processed,
+    input wire model_scale_processed,
+    input wire mesh_data_processed,
+    input wire model_rendered,
+    input wire frame_cleared,
 
     // Master read interface
     output reg m_axi_hpr_arvalid,

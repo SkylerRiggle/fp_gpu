@@ -4,6 +4,11 @@ module axi_reader (
     input wire clk,
     input wire rst_n,
 
+    // Output values
+    output reg m_axis_out_tvalid,
+    input wire m_axis_out_tready,
+    output reg [31:0] m_axis_out_tdata,
+
     // Master read interface
     output reg m_axi_hpr_arvalid,
     input wire m_axi_hpr_arready,

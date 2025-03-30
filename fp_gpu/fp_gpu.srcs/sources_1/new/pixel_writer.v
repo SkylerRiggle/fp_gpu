@@ -1,8 +1,19 @@
 `timescale 1ns / 1ps
 
-module pixel_writer(
+module pixel_writer #(
+    parameter FRAME_BUFFER_ADDR = 32'h60000070
+)(
     input wire clk,
     input wire rst_n,
+
+    // Pixel input
+    input wire s_axis_pixel_tvalid,
+    output reg s_axis_pixel_tready,
+    input wire [31:0] s_axis_pixel_x,
+    input wire [31:0] s_axis_pixel_y,
+    input wire [7:0] s_axis_pixel_red,
+    input wire [7:0] s_axis_pixel_green,
+    input wire [7:0] s_axis_pixel_blue,
 
     // Master write interface
     output wire m_axi_hpw_awvalid,
