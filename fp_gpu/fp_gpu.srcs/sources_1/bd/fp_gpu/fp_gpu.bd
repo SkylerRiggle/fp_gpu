@@ -3672,10 +3672,6 @@
                 "value": "AXI3",
                 "value_src": "constant"
               },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
-              },
               "ID_WIDTH": {
                 "value": "0",
                 "value_src": "constant"
@@ -3759,10 +3755,6 @@
               "MAX_BURST_LENGTH": {
                 "value": "16",
                 "value_src": "auto"
-              },
-              "CLK_DOMAIN": {
-                "value": "fp_gpu_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
               }
             },
             "address_space_ref": "m_axi_hpr",
@@ -3810,10 +3802,6 @@
                 "left": "31",
                 "right": "0"
               },
-              "RLAST": {
-                "physical_name": "m_axi_hpr_rlast",
-                "direction": "I"
-              },
               "RVALID": {
                 "physical_name": "m_axi_hpr_rvalid",
                 "direction": "I"
@@ -3836,10 +3824,6 @@
               "PROTOCOL": {
                 "value": "AXI3",
                 "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
               },
               "ID_WIDTH": {
                 "value": "0",
@@ -3924,10 +3908,6 @@
               "MAX_BURST_LENGTH": {
                 "value": "16",
                 "value_src": "auto"
-              },
-              "CLK_DOMAIN": {
-                "value": "fp_gpu_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
               }
             },
             "address_space_ref": "m_axi_hpw",
@@ -4012,14 +3992,6 @@
               "ASSOCIATED_BUSIF": {
                 "value": "m_axi_hpr:m_axi_hpw",
                 "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "fp_gpu_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
               }
             }
           },
@@ -6390,13 +6362,13 @@
           "float_to_fixed_2/aclk",
           "float_to_fixed_0/aclk",
           "float_to_fixed_1/aclk",
-          "gpu_controller/clk",
           "axi_reader_0/clk",
           "axi_reader_1/clk",
           "axi_reader_2/clk",
           "depth_writer/clk",
           "rasterizer/clk",
-          "pixel_writer/clk"
+          "pixel_writer/clk",
+          "gpu_controller/clk"
         ]
       },
       "axi_reader_0_m_axis_out_tdata": {
@@ -6558,13 +6530,13 @@
       "processing_system7_FCLK_RESET0_N": {
         "ports": [
           "processing_system7/FCLK_RESET0_N",
-          "gpu_controller/rst_n",
           "axi_reader_0/rst_n",
           "axi_reader_1/rst_n",
           "axi_reader_2/rst_n",
           "depth_writer/rst_n",
           "rasterizer/rst_n",
-          "pixel_writer/rst_n"
+          "pixel_writer/rst_n",
+          "gpu_controller/rst_n"
         ]
       },
       "rasterizer_camera_position_processed": {

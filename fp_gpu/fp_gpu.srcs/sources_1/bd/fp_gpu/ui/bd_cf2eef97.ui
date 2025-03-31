@@ -6,8 +6,8 @@
    "Color Coded_ScaleFactor":"0.567586",
    "Color Coded_TopLeft":"-233,0",
    "Default View_Layers":"/Net:true|/processing_system7_FCLK_RESET0_N:true|",
-   "Default View_ScaleFactor":"0.788653",
-   "Default View_TopLeft":"-66,1002",
+   "Default View_ScaleFactor":"0.286589",
+   "Default View_TopLeft":"-1930,3",
    "Display-PortTypeClock":"true",
    "Display-PortTypeOthers":"true",
    "Display-PortTypeReset":"true",
@@ -22,97 +22,97 @@
    "No Loops_TopLeft":"-867,0",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 5 -x 2560 -y 1000 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 5 -x 2560 -y 1020 -defaultsOSRD
-preplace inst processing_system7 -pg 1 -lvl 4 -x 2290 -y 1040 -defaultsOSRD
-preplace inst axi_interconnect_0 -pg 1 -lvl 3 -x 1820 -y 910 -defaultsOSRD
-preplace inst axi_interconnect_1 -pg 1 -lvl 3 -x 1820 -y 1030 -defaultsOSRD
-preplace inst axi_interconnect_3 -pg 1 -lvl 3 -x 1820 -y 760 -defaultsOSRD
-preplace inst gpu_controller -pg 1 -lvl 2 -x 1210 -y 870 -defaultsOSRD
-preplace inst axi_reader_0 -pg 1 -lvl 2 -x 1210 -y 1200 -defaultsOSRD
-preplace inst axi_reader_1 -pg 1 -lvl 2 -x 1210 -y 1470 -defaultsOSRD
-preplace inst axi_reader_2 -pg 1 -lvl 3 -x 1820 -y 1350 -defaultsOSRD
+preplace port DDR -pg 1 -lvl 5 -x 2560 -y 980 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 5 -x 2560 -y 1000 -defaultsOSRD
+preplace inst processing_system7 -pg 1 -lvl 4 -x 2290 -y 1020 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 3 -x 1820 -y 890 -defaultsOSRD
+preplace inst axi_interconnect_1 -pg 1 -lvl 3 -x 1820 -y 1010 -defaultsOSRD
+preplace inst axi_interconnect_3 -pg 1 -lvl 3 -x 1820 -y 740 -defaultsOSRD
+preplace inst gpu_controller -pg 1 -lvl 2 -x 1210 -y 850 -defaultsOSRD
+preplace inst axi_reader_0 -pg 1 -lvl 2 -x 1210 -y 1180 -defaultsOSRD
+preplace inst axi_reader_1 -pg 1 -lvl 2 -x 1210 -y 1450 -defaultsOSRD
+preplace inst axi_reader_2 -pg 1 -lvl 3 -x 1820 -y 1330 -defaultsOSRD
 preplace inst depth_writer -pg 1 -lvl 2 -x 1210 -y 150 -defaultsOSRD
-preplace inst pixel_writer -pg 1 -lvl 2 -x 1210 -y 480 -defaultsOSRD
+preplace inst pixel_writer -pg 1 -lvl 2 -x 1210 -y 470 -defaultsOSRD
 preplace inst fixed_to_float_depth -pg 1 -lvl 1 -x 510 -y 480 -defaultsOSRD
-preplace inst float_to_fixed_2 -pg 1 -lvl 4 -x 2290 -y 1320 -defaultsOSRD
-preplace inst float_to_fixed_1 -pg 1 -lvl 3 -x 1820 -y 1540 -defaultsOSRD
-preplace inst float_to_fixed_0 -pg 1 -lvl 3 -x 1820 -y 1710 -defaultsOSRD
-preplace inst rasterizer -pg 1 -lvl 1 -x 510 -y 1050 -defaultsOSRD
-preplace netloc Net 1 0 5 290 590 940 1300 1630 1250 2060 1230 2540
-preplace netloc processing_system7_FCLK_RESET0_N 1 0 5 300 720 950 1570 1600 1220 NJ 1220 2530
-preplace netloc float_to_fixed_2_m_axis_result_tvalid 1 0 5 210 1650 NJ 1650 1610J 1240 NJ 1240 2530
-preplace netloc float_to_fixed_2_m_axis_result_tdata 1 0 5 90 1810 NJ 1810 NJ 1810 NJ 1810 2520
-preplace netloc float_to_fixed_1_m_axis_result_tdata 1 0 4 230 1630 NJ 1630 NJ 1630 2030
-preplace netloc float_to_fixed_0_m_axis_result_tdata 1 0 4 130 1790 NJ 1790 NJ 1790 2030
-preplace netloc float_to_fixed_0_m_axis_result_tvalid 1 0 4 110 1800 NJ 1800 NJ 1800 2000
-preplace netloc float_to_fixed_1_m_axis_result_tvalid 1 0 4 220 1640 NJ 1640 1640J 1620 2010
-preplace netloc axi_reader_2_m_axis_out_tdata 1 0 4 290 1380 1010J 1370 1570J 1450 2020
-preplace netloc axi_reader_2_m_axis_out_tvalid 1 0 4 280 1580 NJ 1580 1620J 1460 2000
-preplace netloc rasterizer_s_axis_2_ready 1 1 3 N 1100 NJ 1100 2010
-preplace netloc axi_reader_1_m_axis_out_tdata 1 0 3 250 1610 NJ 1610 1440
-preplace netloc axi_reader_1_m_axis_out_tvalid 1 0 3 240 1620 NJ 1620 1410
-preplace netloc rasterizer_s_axis_1_ready 1 1 2 N 1080 1420
-preplace netloc rasterizer_s_axis_0_ready 1 1 2 N 1060 1410
-preplace netloc axi_reader_0_m_axis_out_tvalid 1 0 3 260 1600 NJ 1600 1460
-preplace netloc axi_reader_0_m_axis_out_tdata 1 0 3 270 1590 NJ 1590 1480
-preplace netloc rasterizer_m_axis_pixel_x 1 1 1 760 220n
-preplace netloc rasterizer_m_axis_pixel_y 1 1 1 830 240n
-preplace netloc rasterizer_m_axis_pixel_red 1 1 1 880 570n
-preplace netloc rasterizer_m_axis_pixel_green 1 1 1 970 590n
-preplace netloc rasterizer_m_axis_pixel_blue 1 1 1 920 610n
-preplace netloc rasterizer_m_axis_pixel_valid 1 0 2 300 570 780
-preplace netloc pixel_writer_s_axis_pixel_tready 1 0 2 100 380 960J
-preplace netloc rasterizer_m_axis_depth 1 0 2 280 580 720
-preplace netloc gpu_controller_new_screen_size 1 0 3 80 1390 1000J 1360 1440
-preplace netloc gpu_controller_new_projection_matrix 1 0 3 170 1690 NJ 1690 1490
-preplace netloc gpu_controller_new_clear_color 1 0 3 280 690 NJ 690 1430
-preplace netloc gpu_controller_new_camera_position 1 0 3 140 670 NJ 670 1420
-preplace netloc gpu_controller_new_camera_rotation 1 0 3 270 680 NJ 680 1530
-preplace netloc gpu_controller_new_model_position 1 0 3 200 1660 NJ 1660 1470
-preplace netloc gpu_controller_new_model_rotation 1 0 3 190 1670 NJ 1670 1450
-preplace netloc gpu_controller_new_model_scale 1 0 3 180 1680 NJ 1680 1430
-preplace netloc gpu_controller_new_mesh_data 1 0 3 140 1720 NJ 1720 1520
-preplace netloc gpu_controller_model_should_render 1 0 3 150 1710 NJ 1710 1510
-preplace netloc gpu_controller_clear_frame 1 0 3 160 1700 NJ 1700 1500
-preplace netloc rasterizer_screen_size_processed 1 1 1 730 790n
-preplace netloc rasterizer_projection_matrix_processed 1 1 1 740 810n
-preplace netloc rasterizer_clear_color_processed 1 1 1 750 830n
-preplace netloc rasterizer_camera_position_processed 1 1 1 790 850n
-preplace netloc rasterizer_camera_rotation_processed 1 1 1 860 870n
-preplace netloc rasterizer_model_position_processed 1 1 1 890 890n
-preplace netloc rasterizer_model_rotation_processed 1 1 1 930 910n
-preplace netloc rasterizer_model_scale_processed 1 1 1 980 930n
-preplace netloc rasterizer_mesh_data_processed 1 1 1 990 950n
-preplace netloc rasterizer_model_rendered 1 1 1 1000 970n
-preplace netloc rasterizer_frame_cleared 1 1 1 1010 990n
-preplace netloc rasterizer_frame_width 1 1 1 870 180n
-preplace netloc rasterizer_frame_height 1 1 1 910 200n
-preplace netloc rasterizer_frame_size_pixel_valid 1 1 1 960 430n
-preplace netloc pixel_writer_s_axis_size_tready 1 0 2 120 390 920J
-preplace netloc rasterizer_frame_size_depth_valid 1 1 1 770 100n
+preplace inst float_to_fixed_2 -pg 1 -lvl 4 -x 2290 -y 1300 -defaultsOSRD
+preplace inst float_to_fixed_1 -pg 1 -lvl 3 -x 1820 -y 1520 -defaultsOSRD
+preplace inst float_to_fixed_0 -pg 1 -lvl 3 -x 1820 -y 1690 -defaultsOSRD
+preplace inst rasterizer -pg 1 -lvl 1 -x 510 -y 1030 -defaultsOSRD
+preplace netloc Net 1 0 5 300 580 920 1280 1620 1230 2060 1200 2530
+preplace netloc processing_system7_FCLK_RESET0_N 1 0 5 250 700 930 1550 1610 1430 NJ 1430 2540
+preplace netloc float_to_fixed_2_m_axis_result_tvalid 1 0 5 80 1790 NJ 1790 NJ 1790 NJ 1790 2520
+preplace netloc float_to_fixed_2_m_axis_result_tdata 1 0 5 220 1620 NJ 1620 1640J 1600 NJ 1600 2530
+preplace netloc float_to_fixed_1_m_axis_result_tdata 1 0 4 260 1600 NJ 1600 1630J 1440 2010
+preplace netloc float_to_fixed_0_m_axis_result_tdata 1 0 4 140 1770 NJ 1770 NJ 1770 2020
+preplace netloc float_to_fixed_0_m_axis_result_tvalid 1 0 4 110 1780 NJ 1780 NJ 1780 2000
+preplace netloc float_to_fixed_1_m_axis_result_tvalid 1 0 4 240 1610 NJ 1610 NJ 1610 2000
+preplace netloc axi_reader_2_m_axis_out_tdata 1 0 4 230 670 NJ 670 NJ 670 2010
+preplace netloc axi_reader_2_m_axis_out_tvalid 1 0 4 220 660 NJ 660 NJ 660 2020
+preplace netloc rasterizer_s_axis_2_ready 1 1 3 N 1080 NJ 1080 2000
+preplace netloc axi_reader_1_m_axis_out_tdata 1 0 3 280 1580 NJ 1580 1470
+preplace netloc axi_reader_1_m_axis_out_tvalid 1 0 3 270 1590 NJ 1590 1420
+preplace netloc rasterizer_s_axis_1_ready 1 1 2 N 1060 1430
+preplace netloc rasterizer_s_axis_0_ready 1 1 2 N 1040 1420
+preplace netloc axi_reader_0_m_axis_out_tvalid 1 0 3 300 1560 NJ 1560 1410
+preplace netloc axi_reader_0_m_axis_out_tdata 1 0 3 290 1570 NJ 1570 1490
+preplace netloc rasterizer_m_axis_pixel_x 1 1 1 770 220n
+preplace netloc rasterizer_m_axis_pixel_y 1 1 1 840 240n
+preplace netloc rasterizer_m_axis_pixel_red 1 1 1 890 560n
+preplace netloc rasterizer_m_axis_pixel_green 1 1 1 970 580n
+preplace netloc rasterizer_m_axis_pixel_blue 1 1 1 730 600n
+preplace netloc rasterizer_m_axis_pixel_valid 1 0 2 250 570 790
+preplace netloc pixel_writer_s_axis_pixel_tready 1 0 2 100 380 NJ
+preplace netloc rasterizer_m_axis_depth 1 0 2 230 590 720
+preplace netloc gpu_controller_new_screen_size 1 0 3 250 1360 1010J 1350 1440
+preplace netloc gpu_controller_new_projection_matrix 1 0 3 170 1670 NJ 1670 1460
+preplace netloc gpu_controller_new_clear_color 1 0 3 90 1710 NJ 1710 1560
+preplace netloc gpu_controller_new_camera_position 1 0 3 150 1690 NJ 1690 1540
+preplace netloc gpu_controller_new_camera_rotation 1 0 3 120 1700 NJ 1700 1520
+preplace netloc gpu_controller_new_model_position 1 0 3 200 1640 NJ 1640 1500
+preplace netloc gpu_controller_new_model_rotation 1 0 3 190 1650 NJ 1650 1480
+preplace netloc gpu_controller_new_model_scale 1 0 3 180 1660 NJ 1660 1450
+preplace netloc gpu_controller_new_mesh_data 1 0 3 60 1720 NJ 1720 1550
+preplace netloc gpu_controller_model_should_render 1 0 3 160 1680 NJ 1680 1530
+preplace netloc gpu_controller_clear_frame 1 0 3 210 1630 NJ 1630 1510
+preplace netloc rasterizer_screen_size_processed 1 1 1 740 770n
+preplace netloc rasterizer_projection_matrix_processed 1 1 1 750 790n
+preplace netloc rasterizer_clear_color_processed 1 1 1 760 810n
+preplace netloc rasterizer_camera_position_processed 1 1 1 800 830n
+preplace netloc rasterizer_camera_rotation_processed 1 1 1 870 850n
+preplace netloc rasterizer_model_position_processed 1 1 1 900 870n
+preplace netloc rasterizer_model_rotation_processed 1 1 1 950 890n
+preplace netloc rasterizer_model_scale_processed 1 1 1 980 910n
+preplace netloc rasterizer_mesh_data_processed 1 1 1 990 930n
+preplace netloc rasterizer_model_rendered 1 1 1 1000 950n
+preplace netloc rasterizer_frame_cleared 1 1 1 1010 970n
+preplace netloc rasterizer_frame_width 1 1 1 880 180n
+preplace netloc rasterizer_frame_height 1 1 1 940 200n
+preplace netloc rasterizer_frame_size_pixel_valid 1 1 1 960 420n
+preplace netloc pixel_writer_s_axis_size_tready 1 0 2 130 390 950J
+preplace netloc rasterizer_frame_size_depth_valid 1 1 1 780 100n
 preplace netloc depth_writer_s_axis_size_tready 1 0 2 70 120 NJ
-preplace netloc processing_system7_0_DDR 1 4 1 NJ 1000
-preplace netloc processing_system7_0_FIXED_IO 1 4 1 NJ 1020
-preplace netloc axi_interconnect_1_m_axi_hp 1 3 1 2010 1020n
-preplace netloc axi_interconnect_0_m_axi_hp 1 3 1 2010 910n
-preplace netloc axi_interconnect_3_m_axi_hp 1 3 1 2020 760n
-preplace netloc gpu_controller_m_axi_hpw 1 2 1 N 770
-preplace netloc gpu_controller_m_axi_hpr 1 2 1 N 750
-preplace netloc axi_reader_0_m_axi_hpr 1 2 1 1530 900n
-preplace netloc axi_reader_1_m_axi_hpr 1 2 1 1540 1020n
-preplace netloc depth_writer_m_axi_hpw 1 2 1 1560 150n
-preplace netloc pixel_writer_0_m_axi_hpw 1 2 1 1540 480n
+preplace netloc processing_system7_0_DDR 1 4 1 NJ 980
+preplace netloc processing_system7_0_FIXED_IO 1 4 1 NJ 1000
+preplace netloc axi_interconnect_1_m_axi_hp 1 3 1 2030 1000n
+preplace netloc axi_interconnect_0_m_axi_hp 1 3 1 2030 890n
+preplace netloc axi_interconnect_3_m_axi_hp 1 3 1 2040 740n
+preplace netloc gpu_controller_m_axi_hpw 1 2 1 N 750
+preplace netloc gpu_controller_m_axi_hpr 1 2 1 N 730
+preplace netloc axi_reader_0_m_axi_hpr 1 2 1 1570 880n
+preplace netloc axi_reader_1_m_axi_hpr 1 2 1 1580 1000n
+preplace netloc depth_writer_m_axi_hpw 1 2 1 1600 150n
+preplace netloc pixel_writer_0_m_axi_hpw 1 2 1 1580 470n
 preplace netloc fixed_to_float_depth_M_AXIS_RESULT 1 1 1 720 60n
-preplace netloc axi_reader_2_s_axis_out 1 3 1 N 1310
-preplace netloc axi_reader_0_s_axis_out 1 2 1 1560 1160n
-preplace netloc axi_reader_1_s_axis_out 1 2 1 1550 1430n
-preplace netloc axi_reader_2_m_axi_hpr 1 3 1 2030 1040n
-preplace netloc rasterizer_s_axis_addr_0 1 1 1 900 780n
-preplace netloc rasterizer_s_axis_addr_1 1 1 1 850 800n
-preplace netloc rasterizer_s_axis_addr_2 1 1 2 840 1330 NJ
+preplace netloc axi_reader_2_s_axis_out 1 3 1 N 1290
+preplace netloc axi_reader_0_s_axis_out 1 2 1 1600 1140n
+preplace netloc axi_reader_1_s_axis_out 1 2 1 1590 1410n
+preplace netloc axi_reader_2_m_axi_hpr 1 3 1 2050 1020n
+preplace netloc rasterizer_s_axis_addr_0 1 1 1 910 760n
+preplace netloc rasterizer_s_axis_addr_1 1 1 1 860 780n
+preplace netloc rasterizer_s_axis_addr_2 1 1 2 850 1310 NJ
 levelinfo -pg 1 0 510 1210 1820 2290 2560
-pagesize -pg 1 -db -bbox -sgen 0 0 2680 1820
+pagesize -pg 1 -db -bbox -sgen 0 0 2680 1800
 "
 }
 {
